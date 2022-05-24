@@ -11,11 +11,16 @@ function App() {
     let newList = counterList.map((el,index) => index === i ? el + buttonValue: el)
     setCounterList(newList)
   }
+
+  const minus = (i,buttonValue)=>{
+    let newList = counterList.map((el,index) => index === i ? el - buttonValue: el)
+    setCounterList(newList)
+  }
   return (
 
     <div className="App">
     <Header title={title}/>
-      <Counter counterList={counterList} plus={plus}/>
+      <Counter counterList={counterList} plus={plus} minus={minus}/>
     </div>
   );
 }

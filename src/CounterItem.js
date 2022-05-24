@@ -9,9 +9,9 @@ const CounterItem = (props) => {
             {' '}
             {props.counter}
             {' '}
-            <button>-1</button>
-            <button>-2</button>
-            <button>-3</button>
+            <button onClick={() => props.minus(props.index,1)}>-1</button>
+            <button onClick={() => props.minus(props.index,2)} >-2</button>
+            <button onClick={() => props.minus(props.index,3)} >-3</button>
         </li>
     );
 };
